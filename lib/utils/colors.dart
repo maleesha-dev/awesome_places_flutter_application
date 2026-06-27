@@ -5,7 +5,7 @@ final Color mainColor = Color(0xffCB2957);
 final Color mainBlack = Colors.black;
 final Color mainWhite = Colors.white;
 
-final Color firstCategoryColor = Color(0xff8458B3);
+final Color firstCategoryColor = Color(0xCA7E5F9F);
 final Color secondCategoryColor = Color(0xffa0d2eb);
 final Color thirdCategoryColor = Color(0xfffbaf08);
 

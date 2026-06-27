@@ -1,4 +1,5 @@
 import 'package:awesome_places/utils/colors.dart';
+import 'package:awesome_places/widgets/home_page/category_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,6 +13,7 @@ class HomePage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,7 +66,63 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                Image.asset("assets/main.png"),
+                Image.asset(
+                    "assets/main.png",
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Text(
+                  "Select a Place from the categories",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: mainColor,
+                    fontWeight: FontWeight.w500
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: (){
+
+                      },
+                      child: CategoryCard(
+                        title: "Natural Wonders",
+                        cardBGColor: subNaturalWondersColor,
+                        cardWidth: 166,
+                      ),
+                    ),CategoryCard(
+                      title: "Nightlife",
+                      cardBGColor: mainNightLifeColor,
+                      cardWidth: 166,
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    CategoryCard(
+                      title: "Landmarks",
+                      cardBGColor: mainLandMarksColor,
+                      cardWidth: 166,
+                    ),CategoryCard(
+                      title: "Cultural",
+                      cardBGColor: mainCulturalColor,
+                      cardWidth: 166,
+                    ),
+                  ],
+                ),
+                CategoryCard(
+                  title: "Book For A Ride Today!",
+                  cardBGColor: firstCategoryColor,
+                  cardWidth: 176*2,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
               ],
             ),
           ),
