@@ -1,5 +1,6 @@
+import 'package:awesome_places/pages/natural_wonders.dart';
 import 'package:awesome_places/utils/colors.dart';
-import 'package:awesome_places/widgets/home_page/category_card.dart';
+import 'package:awesome_places/widgets/reusable/home_page/category_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -87,7 +88,10 @@ class HomePage extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: (){
-
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const NaturalWondersPage()
+                        ),
+                        );
                       },
                       child: CategoryCard(
                         title: "Natural Wonders",

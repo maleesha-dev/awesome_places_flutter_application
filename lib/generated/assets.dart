@@ -6,12 +6,16 @@ class Assets {
   Assets._();
 
   static const AssetGenImage main = AssetGenImage('assets/main.png');
+  static const AssetGenImage nature1 = AssetGenImage('assets/nature1.png');
+  static const AssetGenImage nature2 = AssetGenImage('assets/nature2.png');
+  static const AssetGenImage nature3 = AssetGenImage('assets/nature3.png');
 }
 
 class AssetGenImage {
   const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
 
   final String _assetName;
+
 
   final Size? size;
   final Set<String> flavors;
@@ -69,8 +73,15 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({AssetBundle? bundle, String? package}) {
-    return AssetImage(_assetName, bundle: bundle, package: package);
+  ImageProvider provider({
+    AssetBundle? bundle,
+    String? package,
+  }) {
+    return AssetImage(
+      _assetName,
+      bundle: bundle,
+      package: package,
+    );
   }
 
   Widget custom({
@@ -87,3 +98,4 @@ class AssetGenImage {
 
   String get keyName => _assetName;
 }
+
