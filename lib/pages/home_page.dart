@@ -1,4 +1,7 @@
+import 'package:awesome_places/pages/cultural.dart';
+import 'package:awesome_places/pages/landmarks.dart';
 import 'package:awesome_places/pages/natural_wonders.dart';
+import 'package:awesome_places/pages/night_life.dart';
 import 'package:awesome_places/utils/colors.dart';
 import 'package:awesome_places/widgets/reusable/home_page/category_card.dart';
 import 'package:flutter/material.dart';
@@ -98,24 +101,48 @@ class HomePage extends StatelessWidget {
                         cardBGColor: subNaturalWondersColor,
                         cardWidth: 166,
                       ),
-                    ),CategoryCard(
-                      title: "Nightlife",
-                      cardBGColor: mainNightLifeColor,
-                      cardWidth: 166,
+                    ),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute
+                          (builder: (context) => const NightLifePage()
+                        )
+                        );
+                      },
+                      child: CategoryCard(
+                        title: "Nightlife",
+                        cardBGColor: mainNightLifeColor,
+                        cardWidth: 166,
+                      ),
                     ),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CategoryCard(
-                      title: "Landmarks",
-                      cardBGColor: mainLandMarksColor,
-                      cardWidth: 166,
-                    ),CategoryCard(
-                      title: "Cultural",
-                      cardBGColor: mainCulturalColor,
-                      cardWidth: 166,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => const LandMarksPage()
+                        ));
+                      },
+                      child: CategoryCard(
+                        title: "Landmarks",
+                        cardBGColor: mainLandMarksColor,
+                        cardWidth: 166,
+                      ),
+                    )
+                    ,GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const CulturalPage()
+                        ));
+                      },
+                      child: CategoryCard(
+                        title: "Cultural",
+                        cardBGColor: mainCulturalColor,
+                        cardWidth: 166,
+                      ),
                     ),
                   ],
                 ),

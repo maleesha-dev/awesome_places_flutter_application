@@ -13,7 +13,7 @@ class NaturalWondersPage extends StatelessWidget {
           style: TextStyle(
             fontSize: 32,
             fontWeight: FontWeight.w600,
-            color: mainNaturalWondersColor
+            color: mainNaturalWondersColor,
           ),
         ),
       ),
@@ -40,6 +40,7 @@ class NaturalWondersPage extends StatelessWidget {
                 title: "Nature Wonders Place-1",
                 desc: "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
                 imageURL: "assets/nature2.png",
+                isCornerRounded: false,
               ),
               SizedBox(
                 height: 40,
@@ -48,6 +49,7 @@ class NaturalWondersPage extends StatelessWidget {
                 title: "Nature Wonders Place-2",
                 desc: "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
                 imageURL: "assets/nature1.png",
+                isCornerRounded: false,
               ),
               SizedBox(
                 height: 40,
@@ -56,6 +58,7 @@ class NaturalWondersPage extends StatelessWidget {
                 title: "Nature Wonders Place-3",
                 desc: "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
                 imageURL: "assets/nature3.png",
+                isCornerRounded: false,
               ),
               SizedBox(
                 height: 40,
