@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                            "Awesome",
+                          "Awesome",
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w500,
@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 45,
                             fontWeight: FontWeight.w900,
-                            color: mainColor
+                            color: mainColor,
                           ),
                         ),
                       ],
@@ -49,51 +49,42 @@ class HomePage extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
                         color: mainColor,
-                        border: Border.all(
-                            width: 1,
-                        ),
+                        border: Border.all(width: 1),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 Text(
                   textAlign: TextAlign.justify,
                   "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility of scenic landscapes, the allure of historical landmarks, or the excitement of vibrant cities, our curated collection of places to visit offers something for every traveler.",
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: mainTextColor,
-                  ),
+                  style: TextStyle(fontSize: 18, color: mainTextColor),
                 ),
-                SizedBox(
-                  height: 30,
-                ),
+                SizedBox(height: 30),
                 Image.asset(
-                    "assets/main.png",
+                  "assets/main.png",
                   width: double.infinity,
                   fit: BoxFit.cover,
                 ),
-                SizedBox(
-                  height: 30,
-                ),
+                SizedBox(height: 30),
                 Text(
                   "Select a Place from the categories",
                   style: TextStyle(
                     fontSize: 20,
                     color: mainColor,
-                    fontWeight: FontWeight.w500
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     GestureDetector(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => const NaturalWondersPage()
-                        ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NaturalWondersPage(),
+                          ),
                         );
                       },
                       child: CategoryCard(
@@ -103,10 +94,12 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute
-                          (builder: (context) => const NightLifePage()
-                        )
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NightLifePage(),
+                          ),
                         );
                       },
                       child: CategoryCard(
@@ -122,21 +115,27 @@ class HomePage extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => const LandMarksPage()
-                        ));
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LandMarksPage(),
+                          ),
+                        );
                       },
                       child: CategoryCard(
                         title: "Landmarks",
                         cardBGColor: mainLandMarksColor,
                         cardWidth: 166,
                       ),
-                    )
-                    ,GestureDetector(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => const CulturalPage()
-                        ));
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const CulturalPage(),
+                          ),
+                        );
                       },
                       child: CategoryCard(
                         title: "Cultural",
@@ -149,11 +148,9 @@ class HomePage extends StatelessWidget {
                 CategoryCard(
                   title: "Book For A Ride Today!",
                   cardBGColor: firstCategoryColor,
-                  cardWidth: 176*2,
+                  cardWidth: 176 * 2,
                 ),
-                SizedBox(
-                  height: 30,
-                ),
+                SizedBox(height: 30),
               ],
             ),
           ),

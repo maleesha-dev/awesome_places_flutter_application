@@ -5,10 +5,22 @@ import 'package:flutter/widgets.dart';
 class Assets {
   Assets._();
 
+  static const AssetGenImage cultural = AssetGenImage('assets/Cultural.png');
+  static const AssetGenImage maskGroup = AssetGenImage('assets/Mask group.png');
+  static const AssetGenImage maskGroup1 = AssetGenImage(
+    'assets/Mask group-1.png',
+  );
+  static const AssetGenImage maskGroup2 = AssetGenImage(
+    'assets/Mask group-2.png',
+  );
+  static const AssetGenImage land1 = AssetGenImage('assets/land1.png');
+  static const AssetGenImage land2 = AssetGenImage('assets/land2.png');
   static const AssetGenImage main = AssetGenImage('assets/main.png');
   static const AssetGenImage nature1 = AssetGenImage('assets/nature1.png');
   static const AssetGenImage nature2 = AssetGenImage('assets/nature2.png');
   static const AssetGenImage nature3 = AssetGenImage('assets/nature3.png');
+  static const AssetGenImage night1 = AssetGenImage('assets/night1.jpg');
+  static const AssetGenImage night2 = AssetGenImage('assets/night2.jpg');
 }
 
 class AssetGenImage {

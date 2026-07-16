@@ -17,7 +17,7 @@ final Color subNightLifeColor = Color(0xffE5BA41);
 
 final Color mainLandMarksColor = Color(0xff3B7597);
 final Color subLandMarksColor = Color(0xff7AAACE);
-final Color landMarksCardBackground = Color(0xffACBAC4);
+final Color landMarksCardBackground = Color(0xffEFE9E3);
 
 final Color mainCulturalColor = Color(0xffD92243);
 
